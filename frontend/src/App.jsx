@@ -10,6 +10,7 @@ import Dashboard from './components/Dashboard/Dashboard';
 import GoogleHandler from './components/GoogleHandler';
 import Product from './components/Dashboard/Product';
 import Cart from './pages/Cart';
+
 export default function App() {
   //to get the value
   const dispatch = useDispatch();

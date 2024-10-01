@@ -1,4 +1,4 @@
-import React, { useEffect ,useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { fetchProduct } from '../../redux/productSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import { DataGrid } from '@mui/x-data-grid';
@@ -12,7 +12,7 @@ import { useForm } from 'react-hook-form';
 import { createProduct } from '../../redux/productSlice';
 function Product() {
   const { handleSubmit, register } = useForm();
-  const [isEdit , setIsEdit] = useState(false) ;
+  const [isEdit, setIsEdit] = useState(false);
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -104,7 +104,7 @@ function Product() {
     dispatch(fetchProduct());
     handleClose();
   };
-  
+
   const handleButtonClick = () => {
     setIsEdit(false);
     handleOpen()
@@ -118,7 +118,7 @@ function Product() {
       >
         Add Product
       </button>
-      <Box sx={{ height: 400, width: '100%' }}>
+      <Box sx={{ height: 300, width: '100%' }}>
         <DataGrid
           rows={product}
           columns={columns}
@@ -193,7 +193,7 @@ function Product() {
               className="bg-blue-500 px-6 py-2 rounded-md mt-2 text-white"
               type="submit"
             >
-           {isEdit ? "Update Product" :   "Add Product" }
+              {isEdit ? "Update Product" : "Add Product"}
             </button>
           </form>
         </Box>
